@@ -1,0 +1,93 @@
+.customise-projects{
+    min-height: 100vh;
+    margin-top: 40px;
+}
+.customise-projects form{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+.customise-projects form {
+    height: 100%;
+    width: 90%;
+    margin: auto;
+    border: 1px solid red;
+    padding: 20px;
+    border-radius: 20px;
+}
+.customise-projects form input, .customise-projects form label{
+    display: block;
+    width: 100%;
+    padding: 5px 8px;
+    outline: none;
+    box-sizing: border-box;
+}
+.dark-mood .customise-projects form label{
+    color: #fff !important;
+}
+.customise-projects form input{
+    font-size: 1.1rem;
+    border: 1px solid red;
+}
+.customise-projects form input:focus{
+    color: rgb(168, 32, 32);
+}
+.customise-projects form label{
+    padding: 10px 0px;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.customise-projects form input[type=submit]{
+    width: 300px;
+    margin: 20px 0 10px 0;
+    cursor: pointer;
+    font-weight: 800;
+    border: 1px solid #c2d4cb;
+}
+.image-upload .image-div{
+    padding: 7px 5px;
+    height: 70%;
+    background-color: #DEA20A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #fff;
+    cursor: pointer;
+}
+.image-div{
+    width: 200px;
+    background-color: ;
+}
+.image-upload{
+    margin: 20px 0;
+}
+.image-upload span .image-div{
+    margin-left: 5px;
+}
+.image-upload .image-div svg{
+    font-weight: 700;
+}
+.image-upload .image-div span{
+    margin-left: 5px;
+    color: #fff;
+    font-weight: 300;
+}
+.image-upload .image-div input[type="file"]{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0px 0 0 10px;
+    cursor: pointer;
+    opacity: 0;
+    display: block;
+}
+.submit-container{
+    height: 100px;
+}
+.sucess{
+    color:green;
+    font-size: 1.2rem;
+}
+.warning{
+    font-size: 1.2rem;
+}

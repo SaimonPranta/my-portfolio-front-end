@@ -1,0 +1,78 @@
+.testimonial-heading{
+    text-align: center;
+    margin: 0 0 20px 0;
+}
+.testiomonial-container{
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+}
+.testiomonial-container div{
+    text-align: center;
+    background-color: #2B2866;
+    padding: 15px;
+    border-radius: 20px;
+}
+.testiomonial-container div h4{
+    font-size: 1.22rem;
+}
+.testiomonial-container div img{
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 5px solid #445F9F;
+}
+.testiomonial-container div h4{
+    color: #fff;
+}
+.dark-mood span{
+    font-size: 1.3rem ;
+}
+.testiomonial-container div p{
+    color: rgb(234, 202, 202);
+}
+@media only screen and (min-width:200px) and (max-width:1130px) {
+    .testiomonial-container{
+        width: 90%;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .testimonial-heading span{
+        font-size: 1.1rem !important 
+    }
+    .testiomonial-container div h4{
+        font-size: 1.1rem;
+    }
+    .testiomonial-container div p{
+        font-size: .9rem;
+    }
+    .testiomonial-container{
+        width: 90%;
+        
+    }
+}
+@media only screen and (min-width:200px) and (max-width:650px) {
+    .testiomonial-container div h4{
+        font-size: 1.02rem;
+    }
+    .testiomonial-container div p{
+        font-size: .8rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:600px) {
+    .testiomonial-container div h4{
+        font-size: 1.02rem;
+    }
+    .testiomonial-container div p{
+        font-size: .9rem;
+    }
+    .testiomonial-container{
+        grid-template-columns: 1fr 1fr;
+        column-gap: 10px;
+    }
+    .testiomonial-container div:last-child{
+        display: none;
+    }
+}

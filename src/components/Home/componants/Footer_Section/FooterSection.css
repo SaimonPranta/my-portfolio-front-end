@@ -1,0 +1,63 @@
+.footer-section{
+    margin-top: 40px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #445f9f1c;
+    padding: 20px;
+}
+.footer-section span, .dark-mood .footer-section span{
+    font-size: 1rem;
+}
+
+.socil-section{
+    display: flex;
+    justify-content: center;
+}
+.socil-section a{
+    margin: 10px;
+    text-decoration: none;
+}
+.socil-section svg{
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.7s ease 0s;
+}
+.socil-section svg:hover{
+    background-color: rgb(159, 132, 132);
+    fill:#fff
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .footer-section h3{
+        font-size: 1rem;
+    }
+    .footer-section span{
+        font-size: .9rem;
+    }
+    .socil-section svg{
+        padding: 7px
+    }
+    .socil-section a{
+        margin: 5px;
+        text-decoration: none;
+    }
+    
+}
+@media only screen and (min-width:200px) and (max-width:500px) {
+    .footer-section h3{
+        font-size: .9rem;
+    }
+    .footer-section span{
+        font-size: .8rem;
+    }
+    .socil-section svg{
+        padding: 6px
+    }
+    .socil-section a{
+        margin: 4px;
+        text-decoration: none;
+    }
+    
+}

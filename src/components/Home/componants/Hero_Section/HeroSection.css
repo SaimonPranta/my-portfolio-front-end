@@ -1,0 +1,140 @@
+.hero-text{
+    margin-top: 130px;
+}
+.home-intro h1{
+    /* margin: 100px 0 10px 0; */
+    color: #001C55;
+    /* color: #55198B; */
+    font-family: "Open Sans";
+    font-weight:bolder;
+
+}
+.home-intro h2{
+    padding-left: 0px;
+    font-size: 2.1rem;
+    font-family: "Open Sans";
+    font-weight: 550;
+    color: #56198bec;
+
+    margin-bottom: 20px;
+}
+.home-intro p{
+    font-family: Open Sans;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.intro-btn {
+    margin-top: 60px;
+    display: flex;
+}
+.intro-btn a{
+    background-color: #001C55;
+    color: #fff;
+    font-size: 1rem;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #001C55;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.dark-mood .intro-btn a{
+    background-color: #EDF9FE ;
+    color: #1D1B34;
+    border: 1px solid #EDF9FE;
+}
+.intro-btn a:hover{
+    background-color: #fff;
+    color: #001C55;
+}
+.dark-mood a:hover{
+    background-color: #1D1B34;
+    color: #EDF9FE;
+}
+.intro-btn a svg{
+    margin-right: 6px;
+}
+
+@media only screen and (min-width:200px) and (max-width:1130px) {
+    .home-intro h2{
+        font-size: 1.8rem;
+    }
+    .home-intro p{
+        font-size: 1.8rem;
+    }
+    .hero-text{
+        margin-top: 80px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:900px){
+    .intro-btn a{
+        font-size: .9rem;
+        padding: 8px 13px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .hero-text{
+        margin-top: 60px;
+    }
+    .home-intro h2{
+        font-size: 1.7rem;
+    }
+    .home-intro p{
+        font-size: 1.7rem;
+    }
+    .intro-btn {
+        margin-top: 35px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:760px) {
+    .hero-text{
+        text-align: center;
+        grid-row: 2/3;
+        margin: 10px 0;
+    }
+    .intro-btn {
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:520px) {
+    .home-intro h1{
+        font-size: 2.7rem;
+    }
+    .home-intro h2{
+        font-size: 1.57rem;
+    }
+    .home-intro p{
+        font-size: 1.5rem;
+    }
+    
+    .intro-btn {
+        margin-top: 35px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:490px) {
+    .home-intro h1{
+        font-size: 2.5rem;
+
+    }
+    .home-intro h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:400px) {
+    .home-intro h1{
+        font-size: 2.3rem;
+    }
+    .home-intro h2{
+        font-size: 1.4rem;
+    }
+    .home-intro p{
+        font-size: 1.4rem;
+    }
+    .intro-btn a{
+        font-size: .75rem;
+        padding: 8px 11px;
+        margin-right: 8px;
+    }
+}

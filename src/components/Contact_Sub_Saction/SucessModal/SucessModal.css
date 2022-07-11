@@ -1,0 +1,48 @@
+.sucess-modal{
+    background-color: rgb(49, 143, 49);
+    border: 1px solid rgb(109, 68, 68);
+    height: 70px;
+    width: 300px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    border-radius: 50px;
+    position: absolute;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5;
+    position: fixed;
+}
+.sucess-modal p{
+    color:#fff;
+    margin-left: 5px;
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    .sucess-modal{
+        height: 50px;
+        width: 260px;
+    }
+    .sucess-modal p{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    .sucess-modal{
+        height: 45px;
+        width: 240px;
+    }
+    .sucess-modal p{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:450px) {
+    .sucess-modal{
+        height: 45px;
+        width: 225px;
+    }
+    .sucess-modal p{
+        font-size: .95rem;
+    }
+}

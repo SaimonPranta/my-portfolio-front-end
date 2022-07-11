@@ -1,0 +1,170 @@
+.about-me-info-container {
+    margin: 20px auto !important;
+}
+.about-secton p{
+    color: #7F8DAA;
+}
+.about-secton .about-img{
+    text-align: center;
+}
+.about-secton .about-img img{
+    width: 350px;
+    height: 350px;
+}
+.about-secton .about-img h1{
+    font-size: 3.7rem;
+    font-family: "Open Sans";
+}
+.about-secton .about-img h4{
+    font-size: 1.8rem;
+}
+.about-secton h2{
+    font-size: 1.9rem;
+    padding:10px 0px 5px 0px ;
+}
+.about-secton p{
+    font-size: 1.7rem;
+    font-family: "Open Sans";
+}
+.about-me-info-container{
+    margin: 30px auto;
+}
+.about-secton .about-me-info{
+    display: grid;
+    width: 70%;
+}
+.about-secton .about-me-info span{
+    font-size: 1.4rem;
+    color: #445f9f;;
+    font-weight: 500;
+    padding: 10px 10px 10px 0;
+    border-bottom: 1px solid #445f9f;
+}
+.dark-mood .about-secton .about-me-info span{
+    border-bottom: 1px solid #fff;
+}
+@media only screen and (min-width:200px) and (max-width:1030px) {
+    .about-secton .about-img h1{
+        font-size: 3.2rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.6rem;
+    }
+    .about-secton p{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    .about-secton .about-img h1{
+        font-size: 3rem;
+    }
+    .about-secton .about-img img{
+        width: 350px;
+        height: 300px;
+    }
+    .about-secton h2{
+        font-size: 1.6rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .about-secton .about-img img{
+        width: 300px;
+        height: 280px;
+    }
+    .about-secton .about-img h1{
+        font-size: 2.7rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.5rem;
+    }
+    .about-secton .about-me-info span{
+        font-size: 1.2rem;
+    }
+    .about-secton h2{
+        font-size: 1.5rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:760px) {
+    .skills-contaienr{
+        margin-top: 20px;
+    }
+    .about-secton p{
+        font-size: 1.34rem;
+    }
+    .about-secton .about-img img{
+        width: 280px;
+        height: 270px;
+    }
+    
+}
+@media only screen and (min-width:200px) and (max-width:600px) {
+    .about-secton .about-img h1{
+        font-size: 2.5rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.35rem;
+    }
+    .about-secton h2{
+        font-size: 1.4rem;
+    }
+    .about-secton p{
+        font-size: 1.3rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:500px) {
+    .about-secton .about-img img{
+        width: 280px;
+        height: 230px;
+    }
+    .about-secton .about-img h1{
+        font-size: 2.3rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.24rem;
+    }
+    .about-secton h2{
+        font-size: 1.3rem;
+    }
+    .about-secton .about-me-info span{
+        font-size: 1.1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:430px) {
+    .about-secton .about-img h1{
+        font-size: 2.2rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .about-secton p{
+        font-size: 1.23rem;
+        text-align: justify;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:400px) {
+    .about-secton .about-me-info span{
+        font-size: 1rem;
+    }
+    .about-secton .about-img img{
+        width: 80%;
+        height: 220px;
+    }
+}
+
+@media only screen and (min-width:200px) and (max-width:390px) {
+    .about-secton .about-img img{
+        width: 80%;
+        height: 200px;
+    }
+    .about-secton .about-img h1{
+        font-size: 2rem;
+    }
+    .about-secton .about-img h4{
+        font-size: 1.14rem;
+        margin-bottom: 5px;
+    }
+    .about-secton p{
+        font-size: 1.2rem;
+    }
+}

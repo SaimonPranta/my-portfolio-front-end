@@ -1,0 +1,44 @@
+.mini-footer{
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mini-footer h6{
+    font-size: 1.4rem;
+    color: #2B2866;
+}
+.mini-footer span{
+    color: #58BBF8 !important;
+    font-size: 1.2rem !important;
+}
+.dark-mood .mini-footer span{
+    color: #fff !important;
+}
+
+.dark-mood .mini-footer h6{
+    color: #56BBF3 !important;
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    .mini-footer h6{
+        font-size: 1.2rem;
+    }
+    .mini-footer span{
+        font-size: 1.1rem !important;
+    }
+    .mini-footer{
+        height: 100px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:600px) {
+    .mini-footer h6{
+        font-size: 1rem;
+    }
+    .mini-footer span{
+        font-size: .9rem !important;
+    }
+    .mini-footer{
+        height: 80px;
+    }
+}

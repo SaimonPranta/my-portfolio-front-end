@@ -1,0 +1,16 @@
+.main-porject-handle{
+    display: grid;
+    grid-template-columns: .2fr 1fr;
+}
+
+.project-sub-taitel a{
+    display: inline-block;
+    text-decoration: none;
+    color: #2B2866;
+    font-weight: 500;
+    border:  1px solid #58BBF8;
+    background-color: green;
+    border-radius: 8px;
+    padding: 5px 15px;
+    font-size: 1rem;
+}

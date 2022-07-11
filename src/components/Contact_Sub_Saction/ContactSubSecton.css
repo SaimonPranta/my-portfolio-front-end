@@ -1,0 +1,194 @@
+.contact-sum-section-main{
+    margin: 30px 0 20px 0;
+}
+.contact-sum-section-main h2, .contact-sum-section-main span{
+    padding: 0px;
+    display: block;
+    text-align: center;
+}
+.contact-sum-section-main span{
+    font-size: 1.1rem;
+}
+.contact-sub-section{
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+.contact-sub-section p{
+    color: #fff;
+    font-size: 1.3rem;
+}
+.warning{
+    color:rgb(209, 197, 33) !important;
+    display: none;
+}
+.contact-social div{
+    width: 80%;
+    background-color: #2B2866;
+    border-radius: 10px;
+    padding: 30px 10px;
+    text-align: center;
+    color: #fff;
+    margin: 10px auto;
+}
+
+.contact-social div svg{
+    width: 30px;
+    height: 30px;
+}
+.contact-social div h6{
+    font-size: 1.2rem;
+}
+.contact-social div p{
+    font-size: 1rem;
+    text-align: center;
+}
+.contact-social div a{
+    text-decoration: none;
+    color: #56BBF3;
+}
+.messeage-form{
+    margin-top: 30px;
+}
+.messeage-form form{
+    width: 95%;
+    box-sizing: border-box;
+    margin: auto;
+    padding: 25px 10px;
+    color: #2B2866;
+    border-radius: 10px;
+    border: 1px solid #001C55;
+    background-color: #001c5500;
+}
+.messeage-form {
+    margin-top: 20px;
+  }
+.dark-mood .messeage-form form{
+    border: 1px solid #56BBF3;
+    color: #56BBF3;
+}
+.messeage-form form input, .messeage-form form textarea, .messeage-form form label{
+    display: block;
+    padding: 8px;
+    margin: auto;
+    width: 95%;
+}
+.messeage-form form input{
+    font-size: 1rem;
+}
+.messeage-form form textarea{
+    font-size: 1.05rem;
+}
+.messeage-form form input{
+    height: 1rem;
+}
+.messeage-form form input:focus{
+    color: #56BBF3;
+    font-size: 1rem;
+}
+.messeage-form form textarea:focus{
+    color: #56BBF3;
+    font-size: 1.05rem;
+}
+.messeage-form form div{
+    width: 95%;
+    margin: auto;
+}
+.messeage-form form input[type=submit]{
+    margin: 20px 0 10px 7px;
+    width: 200px;
+    height: 40px;
+    background-color: #001C55;
+    border: 1px solid #001C55;
+    color: #fff;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+
+}
+.dark-mood .messeage-form form input[type=submit]{
+    background-color: #EDF9FE;
+    border: 1px solid #EDF9FE;
+    color: #56BBF3;
+    
+}
+.messeage-form form input[type=submit]:hover{
+    background-color:  #EDF9FE;
+    color: #56BBF3;
+}
+.dark-mood .messeage-form form input[type=submit]:hover{
+    background-color:  #1D1B34;
+    color: #EDF9FE;
+}
+.messeage-form form input, .messeage-form form textarea{
+    border: none;
+    border: 1px solid #2b286666;
+    outline: none;
+}
+.messeage-form form textarea{
+    height: 80px;
+}
+.dark-mood .messeage-form form input, .dark-mood .messeage-form form textarea{
+    border: 1px solid #56BBF3;
+}
+.messeage-form form label{
+    padding: 8px 0px;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+.submit-btn-container{
+    height: 90px;
+    align-items: center;
+}
+.submit-btn-container div{
+    display: grid;
+    grid-template-columns:.4fr 1fr;
+}
+.submit-btn-container img{
+    margin: 20px 0 0 4px;
+    display: none;
+}
+.messeage-form form div {
+    margin: 0px
+}
+@media only screen and (min-width:200px) and (max-width:900px) {
+    .contact-social div h6{
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .messeage-form form label{
+        margin-left: 2px;
+        padding: 8px 0px;
+        font-size: 1rem;
+        font-weight: 500;
+    }
+    .messeage-form form input[type=submit]{
+        width: 180px;
+        font-size: 1rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:700px) {
+    .contact-sub-section{
+        grid-template-columns: 1fr;
+    }
+    .contact-social{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .contact-social div{
+        width: 85%;
+        margin: 0px auto;
+    }
+    .contact-social div p{
+        font-size: .87rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:510px) {
+    .contact-social{
+        grid-template-columns: 1fr;
+        row-gap: 5px;
+    }
+}
+

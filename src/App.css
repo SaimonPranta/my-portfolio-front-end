@@ -1,0 +1,88 @@
+
+main{
+  width: 90%;
+  height: 100%;
+  display: block;
+  margin: auto;
+}
+body{
+margin: auto; 
+/* background-color: #EDF9FE;
+  background-color: #DCEAD5; */
+
+}
+.dark-mood h1, .dark-mood h2,  .dark-mood h3, .dark-mood h4, .dark-mood h5, .dark-mood h6{
+  color: #ffffff !important;
+}
+.dark-mood p , .dark-mood span{
+  color: #E5E4E2 !important;
+}
+html section{
+  min-height: 100vh;
+}
+html p{
+  font-family: Open Sans;
+}
+html span{
+  font-family: Open Sans;
+  font-weight: 600;
+}
+html h1{
+  font-size: 3.3rem;
+  color: #001C55;
+}
+html h2{
+  font-family: "Open Sans";
+  color: #56198b;
+  font-size: 2.6rem;
+  padding-left: 8px;
+
+}
+html h3{
+  color: #56198b;
+  font-family: "Open Sans";
+}
+html span{
+  color: #56198bec;
+  font-size: 1.3rem;
+  font-family: "Open Sans";
+}
+html h4{
+  color: #56198bec;
+  font-family: "Open Sans";
+}
+html p{
+  font-family: "Open Sans";
+  color: #7F8DAA;
+}
+html input[type=submit]{
+  font-family: "Open Sans";
+}
+html button{
+  font-family: "Open Sans";
+}
+@media only screen and (min-width:200px) and (max-width:1130px) {
+  html h1{
+    font-size: 3rem;
+  }
+  html h2{
+    font-size: 2.2rem;
+  }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+  html h1{
+    font-size: 2.9rem;
+  }
+
+}
+/* =========== */
+@media only screen and (min-width:200px) and (max-width:490px) {
+  html h2{
+    font-size: 1.7rem;
+  }
+}
+@media only screen and (min-width:200px) and (max-width:400px) {
+  html h2{
+    font-size: 1.5rem !important;
+  }
+}

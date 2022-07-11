@@ -1,0 +1,51 @@
+/* ===============================================
+                Common CSS
+=============================================== */
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.common-img{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    justify-content: space-around;
+}
+.common-img img{
+    height: 720px;
+    width: 90%;
+    text-align: center;
+}
+
+@media only screen and (min-width:200px) and (max-width:1130px) {
+    .common-img img{
+        width: 100%;
+        height: 570px ;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:800px) {
+    .common-img img{
+        width: 100%;
+        height: 500px ;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:760px) {
+    .common-img img{
+        width: 100%;
+        height: 380px ;
+    }
+    .grid{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:520px) {
+    .common-img img{
+        width: 100%;
+        height: 300px;
+    }
+    
+}
+
+

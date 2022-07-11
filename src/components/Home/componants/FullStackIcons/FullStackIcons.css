@@ -1,0 +1,46 @@
+.tech-icons{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+.tech-icons div{
+    cursor: pointer;
+}
+.tech-icons div p{
+    display: none;
+    margin-left: -10px;
+    z-index: 3;
+}
+.tech-icons .special-icons p{
+    margin-left: -1px;
+}
+.tech-icons div:hover p{
+    display: block;
+    cursor: pointer;
+}
+@media only screen and (min-width:200px) and (max-width:1130px) {
+    .tech-icons{
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:760px) {
+    .fullStack-text{
+        grid-row: 2/3;
+    }
+    .fullStack-img{
+        grid-column: 1/3;
+    }
+    .tech-icons img{
+        height: 40px;
+        width: 40px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:400px) {
+    .tech-icons img{
+        height: 35px;
+        width: 35px;
+    }
+}

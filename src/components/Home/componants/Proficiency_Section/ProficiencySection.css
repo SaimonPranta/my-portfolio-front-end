@@ -1,0 +1,48 @@
+.proficiency-main-section div h2{
+    text-align: center;
+    padding-left: 8px;
+    margin: 50px auto 0px auto;
+}
+@media only screen and (min-width:200px) and (max-width:1130px) {
+    .proficiency-img img{
+        margin: 40px 0 5px 0;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:1000px) {
+    .proficiency-img img{
+        height: 600px;
+        margin: 0px;
+    }
+    .proficiency-section{
+        grid-template-columns: .8fr 1fr;
+    }
+    .proficiency-main-section h2{
+        margin:20px 0 0 0 !important;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:760px) {
+    .proficiency-main-section .grid{
+        grid-template-columns: 1fr;
+    }
+    .proficiency-section{
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+    .proficiency-img img{
+        height: 300px;
+        margin: 0px;
+    }
+    .proficiency-section .proficiency-bar {
+        grid-column: 1/3;
+        grid-row: 2/3;
+    }
+    .proficiency-main-section h2{
+        margin: 10px 0 !important;
+    }
+}
+
+@media only screen and (min-width:200px) and (max-width:520px) {
+    .proficiency-img img{
+        height: 260px;
+    }
+}

@@ -1,0 +1,205 @@
+.porject-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    box-sizing: border-box;
+}
+.project-main-text{
+    text-align: center;
+}
+.project-main-text h2{
+    margin: 50px 0 15px 0;
+}
+.project-main-text p{
+    font-size: 1.4rem;
+}
+.porject-section div img{
+    height: 400px;
+    width: 100%;
+}
+.project-sub-taitel{
+    text-align: center;
+    font-size: 1.7rem;
+    margin: 20px;
+    color: #2B2866;
+}
+.projects-contaienr{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.projects-contaienr .sub-poroject-container{
+    box-sizing: border-box;
+    background-color: #2b2866;
+    border: 1px solid #404fa6cb;
+}
+.projects-contaienr .projects-text-contaienr{
+    border: none;
+    padding: 15px;
+}
+.projects-contaienr .projects-text-contaienr div{
+    border: none;
+}
+.projects-contaienr div img{
+    height: 200px;
+    display: block;
+    width: 100%;
+}
+.projects-contaienr div h6{
+    font-size: 1.1rem;
+    margin: 5px 0;
+    color: #fff;
+}
+.projects-contaienr div div{
+    width: 100%;
+    padding: 0px;
+}
+.projects-contaienr div div a{
+    display: inline-block;
+    text-decoration: none;
+    color: #2B2866;
+    font-weight: 500;
+    border:  1px solid #58BBF8;
+    background-color: #58BBF8;
+    border-radius: 8px;
+    margin-right: 15px;
+    padding: 10px 20px;
+}
+
+.projects-contaienr div div a:hover{
+    transition: ease-in-out .4s;
+    background-color: #2B2866;
+    color: #58BBF8;
+}
+@media only screen and (min-width:200px) and (max-width:1300px) {
+    .projects-contaienr div img{
+        height: 150px;
+        display: block;
+        width: 100%;
+    }
+    .project-main-text h2{
+        margin: 60px 0 15px 0;
+    }
+    .porject-contaienr-main-img img{
+        height: 300px !important;
+        margin-top: 27px;
+    }
+    .projects-contaienr div h6{
+        font-size: 1rem;
+        margin: 5px 0;
+    }
+    .projects-contaienr .projects-text-contaienr{
+        padding: 10px;
+    }
+    .projects-contaienr div div a{
+        border-radius: 6px;
+        padding: 5px 15px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:1200px) {
+    .projects-contaienr{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:910px) {
+    .projects-contaienr{
+        gap: 15px;
+    }
+    .projects-contaienr div h6{
+        font-size: .93rem;
+        margin: 5px 0;
+    }
+    .projects-contaienr .projects-text-contaienr{
+        padding: 8px;
+    }
+    .projects-contaienr div div a{
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: .9rem;
+    }
+    .porject-section p{
+        font-size: 1.3rem;
+    }
+    .project-sub-taitel h4{
+        font-size: 1.4rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:750px) {
+    .projects-contaienr div div a{
+        display: block;
+        margin: 5px 15px;
+        text-align: center;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: .9rem;
+    }
+    .projects-contaienr div img{
+        height: 120px;
+        width: 100%;
+    }
+    .porject-section p{
+        font-size: 1.2rem;
+    }
+    .project-sub-taitel h4{
+        font-size: 1.3rem;
+    }
+    .porject-section{
+        grid-template-columns: 1fr;
+    }
+    .porject-section h2{
+        margin-top: 10px ;
+    }
+    
+}
+@media only screen and (min-width:200px) and (max-width:650px) {
+    .projects-contaienr div h6{
+        font-size: .9rem;
+        margin: 5px 0;
+        font-weight: 650;
+    }
+    .porject-section img{
+        height: 200px !important;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:600px) {
+    .projects-contaienr{
+        grid-template-columns: 1fr 1fr;
+    }
+    .projects-contaienr div div a{
+        display: inline-block;
+        margin: 0;
+        margin-right: 5px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        text-align: center;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: .9rem;
+    }
+   
+    .project-sub-taitel h4{
+        font-size: 1.27rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:450px) {
+    .projects-contaienr div div a{
+        display: block;
+        margin: 5px 15px;
+        text-align: center;
+        border-radius: 6px;
+        padding: 4px 10px;
+        font-size: .9rem;
+    }
+}
+@media only screen and (min-width:200px) and (max-width:430px) {
+    .projects-contaienr div div a{
+        padding: 3px 8px;
+        font-size: .85rem;
+    }
+    .projects-contaienr div h6{
+        font-size: .8rem;
+        margin: 1px 0;
+    }
+}
