@@ -81,6 +81,9 @@ nav{
   transition: 0.4s;
   border-radius: 5px;
 }
+.dark-mood .bar1, .dark-mood .bar2, .dark-mood .bar3 {
+  background-color: #fff;
+}
 .change .bar1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
   transform: rotate(-45deg) translate(-9px, 6px) ;

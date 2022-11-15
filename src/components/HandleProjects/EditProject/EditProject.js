@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import Header from '../../Header/Header';
 
 const uploadIcon = <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" className="bi bi-upload" viewBox="0 0 16 16">
@@ -12,9 +12,18 @@ const EditProject = () => {
     const [imageInfo, setImageInfo] = useState('')
     const [codition, setCondition] = useState({});
     const { id } = useParams();
+    const cooki = document.cookie.split("=")[1];
+    const navigate = useNavigate()
+    const from = "/admin"
+
 
     useEffect(() => {
-        fetch(`http://localhost:7000/api/single_porject?id=${id}`)
+
+        fetch(`${process.env.REACT_APP_PROJECT_API}/api/single_porject?id=${id}`, {
+            headers: {
+                authorization: `Bearer ${cooki}`
+            }
+        })
             .then(res => res.json())
             .then(data => {
                 document.getElementById("title").value = data[0].title;
@@ -29,7 +38,6 @@ const EditProject = () => {
 
             })
     }, []);
-    console.log(info)
 
     // Auto Clear Form Sucess and Warning Message
     const autoClearWarningMsg = () => {
@@ -66,9 +74,12 @@ const EditProject = () => {
 
 
 
-        fetch(process.env.REACT_APP_PROJECT_API, {
+        fetch(`${process.env.REACT_APP_PROJECT_API}/api/porjects`, {
             method: "PATCH",
-            body: formData
+            body: formData,
+            headers: {
+                authorization: `Bearer ${cooki}`
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -79,6 +90,7 @@ const EditProject = () => {
                     currentCondition["sucess"] = data.sucess;
                     currentCondition["message"] = "";
                     setCondition(currentCondition)
+                    navigate(from)
                 } else if (data.message) {
                     currentCondition["sucess"] = "";
                     currentCondition["message"] = data.message;

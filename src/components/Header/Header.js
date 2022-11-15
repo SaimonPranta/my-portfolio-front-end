@@ -12,31 +12,53 @@ const Header = () => {
     const menuToggolerRef = useRef()
     const navItemsrRef = useRef()
 
+    // ===============This is for Initial Day Mood===============
+
+    // useEffect(() => {
+    //     const currentState = { ...themInfo }
+    //     const themMood = localStorage.getItem("my_web_them")
+
+    //     if (themMood === "day_mood") {
+    //         currentState.background = "#1D1B34"
+    //         setThemInfo(currentState)
+    //     } else {
+    //         currentState.background = "#EDF9FE"
+    //         setThemInfo(currentState)
+    //         localStorage.removeItem("my_web_them")
+    //     }
+    // }, []);
+
+
+    // ===============This is for Initial Night Mood===============
 
     useEffect(() => {
         const currentState = { ...themInfo }
         const themMood = localStorage.getItem("my_web_them")
 
-        if (themMood === "dark") {
-            currentState.background = "#1D1B34"
+        if (themMood === "day_mood") {
+            currentState.background = "#EDF9FE" // white color
             setThemInfo(currentState)
         } else {
-            currentState.background = "#EDF9FE"
+            currentState.background = "#1D1B34" // dark color
             setThemInfo(currentState)
             localStorage.removeItem("my_web_them")
         }
     }, []);
+
+
 
     const handleThem = () => {
         const currentState = { ...themInfo }
         if (currentState.background === "#EDF9FE") {
             currentState.background = "#1D1B34"
             setThemInfo(currentState)
-            localStorage.setItem("my_web_them", "dark")
+            localStorage.removeItem("my_web_them")
+            // localStorage.setItem("my_web_them", "day_mood")
         } else {
             currentState.background = "#EDF9FE"
             setThemInfo(currentState)
-            localStorage.removeItem("my_web_them")
+            localStorage.setItem("my_web_them", "day_mood")
+            // localStorage.removeItem("my_web_them")
         }
     }
     const menuIcon = () => {

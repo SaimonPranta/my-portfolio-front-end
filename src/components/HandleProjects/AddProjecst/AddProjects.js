@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from '../../Header/Header';
 import './AddProjects.css';
 
@@ -12,6 +13,10 @@ const AddProjects = () => {
     const [info, setInfo] = useState({})
     const [imageInfo, setImageInfo] = useState('')
     const [codition, setCondition] = useState({});
+    const cooki = document.cookie.split("=")[1];
+
+    const navigate = useNavigate()
+
 
     const inputHandle = (e) => {
         const currentInfo = { ...info }
@@ -44,9 +49,12 @@ const AddProjects = () => {
         formData.append("liveLink", info.liveLink)
 
 
-        fetch(process.env.REACT_APP_PROJECT_API, {
+        fetch(`${process.env.REACT_APP_PROJECT_API}/api/porjects`, {
             method: "POST",
-            body: formData
+            body: formData,
+            headers: {
+                authorization: `Bearer ${cooki}`
+            }
         })
             .then(res => res.json())
             .then(data => {
@@ -56,6 +64,7 @@ const AddProjects = () => {
                     document.getElementById("liveDemo").value = "";
                     currentCondition["sucess"] = data.sucess;
                     currentCondition["message"] = "";
+                    navigate("/admin")
                     setCondition(currentCondition)
                 } else if (data.message) {
                     currentCondition["sucess"] = "";
@@ -76,37 +85,37 @@ const AddProjects = () => {
         <section>
             <Header />
             <div className='customise-projects'>
-            <form onSubmit={handleAddPorjects} >
-                <div>
-                    <label>Title</label>
-                    <input type="text" name="title" placeholder='Project Name' required onChange={inputHandle} id="title" autoComplete="off" />
-                </div>
-                <div>
-                    <label>Github Link</label>
-                    <input type="url" name="gitHub" placeholder='Link' required onChange={inputHandle} id="gitHub" autoComplete="off" />
-                </div>
-                <div>
-                    <label>Live Demo Link</label>
-                    <input type="url" name="liveLink" placeholder='Link' required onChange={inputHandle} id="liveDemo" autoComplete="off" />
-                </div>
-                <div className='image-upload'>
-                    <div className='image-div'>
-                        {uploadIcon}
-                        <span>Image</span>
-                        <input type="file" name="image" required onChange={inputHandle} id="image" autoComplete="off" />
+                <form onSubmit={handleAddPorjects} >
+                    <div>
+                        <label>Title</label>
+                        <input type="text" name="title" placeholder='Project Name' required onChange={inputHandle} id="title" autoComplete="off" />
                     </div>
-                </div>
-                <div className='submit-container'>
-                    <input type="submit" value="Add Project" />
-                    {
-                        codition.sucess && !codition.message && <p className='sucess' style={{display: "block"}}>{codition.sucess}</p>
-                    }
-                    {
-                        !codition.sucess && codition.message && <p className='warning' style={{display: "block"}}>{codition.message}</p>
-                    }
-                </div>
-            </form>
-        </div>
+                    <div>
+                        <label>Github Link</label>
+                        <input type="url" name="gitHub" placeholder='Link' required onChange={inputHandle} id="gitHub" autoComplete="off" />
+                    </div>
+                    <div>
+                        <label>Live Demo Link</label>
+                        <input type="url" name="liveLink" placeholder='Link' required onChange={inputHandle} id="liveDemo" autoComplete="off" />
+                    </div>
+                    <div className='image-upload'>
+                        <div className='image-div'>
+                            {uploadIcon}
+                            <span>Image</span>
+                            <input type="file" name="image" required onChange={inputHandle} id="image" autoComplete="off" />
+                        </div>
+                    </div>
+                    <div className='submit-container'>
+                        <input type="submit" value="Add Project" />
+                        {
+                            codition.sucess && !codition.message && <p className='sucess' style={{ display: "block" }}>{codition.sucess}</p>
+                        }
+                        {
+                            !codition.sucess && codition.message && <p className='warning' style={{ display: "block" }}>{codition.message}</p>
+                        }
+                    </div>
+                </form>
+            </div>
         </section>
     );
 };

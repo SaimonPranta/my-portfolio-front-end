@@ -15,9 +15,9 @@ const FooterSection = () => {
             </Zoom>
             <Flip duration={2500}>
                 <div className='socil-section'>
-                    <a href="https://www.facebook.com/saimon.pranta/">{fbIcon}</a>
-                    <a href="https://www.facebook.com/saimon.pranta/">{twiterIcon}</a>
-                    <a href="https://github.com/SaimonPranta">{githubIcon}</a>
+                    <a href="https://www.facebook.com/saimon.pranta/" target="_blank">{fbIcon}</a>
+                    <a href="https://www.facebook.com/saimon.pranta/" target="_blank">{twiterIcon}</a>
+                    <a href="https://github.com/SaimonPranta" target="_blank">{githubIcon}</a>
                 </div>
             </Flip>
             <Jump bottom duration={2000} distance="650px">

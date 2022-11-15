@@ -1,60 +1,73 @@
 import { createContext, useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import AboutMe from './components/About_Me/AboutMe';
-import Contact from './components/Contact/Contact';
 import SucessModal from './components/Contact_Sub_Saction/SucessModal/SucessModal';
-import Hobbies from './components/Hobbies/Hobbies';
-import Home from './components/Home/Home';
-import Projects from './components/Projects/Projects';
-import Porjectshandle from './components/HandleProjects/HandleProjects';
-import EditProject from './components/HandleProjects/EditProject/EditProject';
-import AddProjects from './components/HandleProjects/AddProjecst/AddProjects';
-
+import Routess from './Routess/Routes';
 
 export const createThemContext = createContext();
+export const adminContext = createContext();
+
 
 function App() {
+  const [isAdmin, setIsAdmin] = useState({ isAdmin: false })
   const [themInfo, setThemInfo] = useState({
     background: "#EDF9FE",
     class: {
       textClasses: "dark-mood"
     }
   });
+  const cooki = document.cookie.split("=")[1];
+
 
   useEffect(() => {
     const themMood = localStorage.getItem("my_web_them");
     const currentState = { ...themInfo }
-    if (themMood === "dark") {
-      currentState.background = "#1D1B34"
+    if (themMood === "day_mood") {
+      currentState.background = "#EDF9FE" //white color
       setThemInfo(currentState)
     } else {
-      currentState.background = "#EDF9FE"
+      currentState.background = "#1D1B34" // dark color
       setThemInfo(currentState)
       localStorage.removeItem("my_web_them")
     }
 
   }, []);
 
+  useEffect(() => {
+    if (cooki) {
+      fetch(`${process.env.REACT_APP_PROJECT_API}/authentication`, {
+        method: "GET",
+        headers: {
+          'Content-type': 'application/json; charset=UTF-8',
+          authorization: `Bearer ${cooki}`
+        }
+      }).then(res => res.json())
+        .then(data => {
+          const currentCon = { ...isAdmin }
+          if (data.sucess) {
+            currentCon['isAdmin'] = true
+            setIsAdmin(currentCon)
+          } else {
+            currentCon['isAdmin'] = false
+            setIsAdmin(currentCon)
+          }
+        })
+    }
+
+
+  }, []);
+
 
   return (
-    <createThemContext.Provider value={[themInfo, setThemInfo]}>
-      <div style={{ backgroundColor: themInfo.background }} className={themInfo.background !== "#EDF9FE" && themInfo.class.textClasses}>
-        <main className="App">
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/about_me' element={<AboutMe/>}/>
-            <Route path='/projects' element={<Projects/>}/>
-            <Route path='/hobbies' element={<Hobbies/>}/>
-            <Route path='/contact' element={<Contact/>}/>
-            <Route path='/admin' element={<Porjectshandle/>}/>
-            <Route path='/admin/add' element={<AddProjects/>}/>
-            <Route path='/admin/:id' element={<EditProject/>}/>
-          </Routes>
-          <SucessModal/>
-        </main>
-      </div>
-    </createThemContext.Provider>
+    <adminContext.Provider value={[isAdmin, setIsAdmin]}>
+      <createThemContext.Provider value={[themInfo, setThemInfo]}>
+        <div style={{ backgroundColor: themInfo.background, maxWidth: "100vw", minHeight: "100vh"}} className={themInfo.background !== "#EDF9FE" ? themInfo.class.textClasses : null}>
+          <main className="App">
+            <Routess />
+            <SucessModal />
+          </main>
+        </div>
+      </createThemContext.Provider>
+    </adminContext.Provider>
   );
 }
 

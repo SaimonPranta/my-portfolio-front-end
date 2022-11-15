@@ -42,7 +42,7 @@ const ContactSubSection = () => {
         event.preventDefault()
         if (formInfo.name && formInfo.email && formInfo.subject && formInfo.message) {
             document.querySelector(".loading-img").style.display = "inline-block"
-            fetch("http://localhost:7000/get_message", {
+            fetch(`${process.env.REACT_APP_PROJECT_API}/get_message`, {
                 method: "POST",
                 body: JSON.stringify(formInfo),
                 headers: {
@@ -51,6 +51,7 @@ const ContactSubSection = () => {
             })
                 .then(res => res.json())
                 .then((data) => {
+                    console.log(data)
                     document.querySelector(".loading-img").style.display = "none"
                     if (data.sucess) {
                         document.querySelector(".sucess-modal").style.display = "flex"
@@ -87,7 +88,7 @@ const ContactSubSection = () => {
                             {mailIcon}
                             <h6>Email</h6>
                             <p>saimonpranta@gmail.comm</p>
-                            <a href='https://mail.google.com/mail/u/0/#search/saimonpranta%40gmail.com?compose=GTvVlcRwPVfJgTLXqCwRFgjpXLJLNzkThLXPlrgwgXsWHqDbznJSnkTdvspHXgTpMgjMdNDhKLXNz'>Send a message</a>
+                            <a href='https://mail.google.com/mail/u/0/#search/saimonpranta%40gmail.com?compose=GTvVlcRwPVfJgTLXqCwRFgjpXLJLNzkThLXPlrgwgXsWHqDbznJSnkTdvspHXgTpMgjMdNDhKLXNz' target="_blank">Send a message</a>
                         </div>
                     </Fade>
                     <Fade left duration={900} distance="400px" wait={500}>
@@ -95,7 +96,7 @@ const ContactSubSection = () => {
                             {MessengerIcon}
                             <h6>Messenger</h6>
                             <p>facebook.com/saimon.pranta</p>
-                            <a href='https://www.facebook.com/saimon.pranta'>Send a message</a>
+                            <a href='https://www.facebook.com/saimon.pranta' target="_blank">Send a message</a>
                         </div>
                     </Fade>
                     <Fade left duration={1200} distance="400px" wait={900}>
@@ -103,7 +104,7 @@ const ContactSubSection = () => {
                             {WhatsAppIcon}
                             <h6>WhatsApp</h6>
                             <p>+8801881476432</p>
-                            <a href='https://wa.me/+8801881476432'>Send a message</a>
+                            <a href='https://wa.me/+8801881476432' target="_blank">Send a message</a>
                         </div>
                     </Fade>
 

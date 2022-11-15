@@ -1,0 +1,204 @@
+*, *:before, *:after {
+	box-sizing: border-box;
+  }
+  .circle, .half, #bird .crest, #bird .face, .quarter, #bird .cheek, #bird .upperLip, #bird .lowerLip, #bird .eye {
+	border-radius: 50%;
+	background-repeat: no-repeat;
+	overflow: hidden;
+  }
+  .half, #bird .crest, #bird .face {
+	background-size: 50% 100%;
+  }
+  .quarter, #bird .cheek, #bird .upperLip, #bird .lowerLip {
+	background-size: 50% 50%;
+  }
+  /* body {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #18233e;
+  } */
+  .loader-container{
+	height: 100vh;
+	width: 100vw !important;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	background-color: #18233e;
+  }
+  #bird {
+	width: 20em;
+	height: 20em;
+	overflow: hidden;
+	position: relative;
+	/* transition: opacity 1s; */
+	transition: opacity .0s;
+	background-color: red;
+
+  }
+  #bird > div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+  }
+  #bird .crest {
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to right, #a12a15, #a12a15);
+	animation: crest 2000ms infinite linear;
+  }
+  @keyframes crest {
+	0% {
+	  transform: rotate(0deg);
+	}
+	25%, 50% {
+	  transform: rotate(180deg);
+	}
+	75%, 100% {
+	  transform: rotate(360deg);
+	}
+  }
+  #bird .face {
+	width: 65%;
+	height: 65%;
+	background-image: linear-gradient(to right, #FFF2FF, #FFF2FF);
+	animation: face 2000ms infinite linear;
+  }
+  @keyframes face {
+	0% {
+	  transform: rotate(0deg);
+	}
+	25%, 50% {
+	  transform: rotate(-180deg);
+	}
+	75%, 100% {
+	  transform: rotate(-360deg);
+	}
+  }
+  #bird .cheek {
+	width: 65%;
+	height: 65%;
+	background-image: linear-gradient(to right, #E7E7E7, #E7E7E7);
+	animation: cheek 2000ms infinite linear;
+  }
+  @keyframes cheek {
+	0% {
+	  transform: rotate(-90deg);
+	}
+	25%, 50% {
+	  transform: rotate(-180deg);
+	}
+	75%, 100% {
+	  transform: rotate(-450deg);
+	}
+  }
+  #bird .upperLip {
+	width: 65%;
+	height: 65%;
+	background-image: linear-gradient(to right, #F7CE42, #F7CE42);
+	animation: upperLip 2000ms infinite linear;
+  }
+  @keyframes upperLip {
+	0% {
+	  transform: rotate(90deg);
+	}
+	25%, 50% {
+	  transform: rotate(0deg);
+	}
+	75%, 100% {
+	  transform: rotate(90deg);
+	}
+  }
+  #bird .lowerLip {
+	width: 35%;
+	height: 35%;
+	background-image: linear-gradient(to right, #F7A500, #F7A500);
+	animation: lowerLip 2000ms infinite linear;
+  }
+  @keyframes lowerLip {
+	0% {
+	  transform: rotate(180deg);
+	}
+	25%, 50% {
+	  transform: rotate(270deg);
+	}
+	75%, 100% {
+	  transform: rotate(180deg);
+	}
+  }
+  #bird .eye {
+	width: 15%;
+	height: 15%;
+	background-color: #18233e;
+	transform: translate(-60%, -60%);
+	animation: eye 2000ms infinite linear;
+  }
+  @keyframes eye {
+	0% {
+	  transform: translate(-60%, -60%);
+	}
+	25%, 50% {
+	  transform: translate(60%, -60%);
+	}
+	75%, 100% {
+	  transform: translate(-60%, -60%);
+	}
+  }
+
+  /* ===============Loading Text css==================== */
+  body {
+	/* background: #eaecfa; */
+  }
+  .loader {
+	width: 250px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-weight: 900;
+	color: #ce4233;
+	letter-spacing: 0.2em;
+  }
+  .loader::before, .loader::after {
+	content: "";
+	display: block;
+	width: 15px;
+	height: 15px;
+	background: #ce4233;
+	position: absolute;
+	animation: load 0.7s infinite alternate ease-in-out;
+  }
+  .loader::before {
+	top: 0;
+  }
+  .loader::after {
+	bottom: 0;
+  }
+  @keyframes load {
+	0% {
+	  left: 0;
+	  height: 30px;
+	  width: 15px;
+	}
+	50% {
+	  height: 8px;
+	  width: 40px;
+	}
+	100% {
+	  left: 235px;
+	  height: 30px;
+	  width: 15px;
+	}
+  }
+  
+  

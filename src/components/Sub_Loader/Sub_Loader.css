@@ -1,0 +1,70 @@
+body {
+    /* background: #eaecfa; */
+  }
+  .sub-loader{
+    width: 100vw !important;
+    margin-top: 50px;
+  }
+  .loader {
+    width: 250px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: helvetica, arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: #ce4233;
+    letter-spacing: 0.2em;
+  }
+  .dark-mood .loader{
+    color: yellow !important;
+  }
+ 
+  .loader::before, .loader::after {
+    content: "";
+    display: block;
+    width: 15px;
+    height: 15px;
+    background: #ce4233;
+    /* background: yellow; */
+    position: absolute;
+    animation: load 0.7s infinite alternate ease-in-out;
+  }
+  .dark-mood .loader::before, .dark-mood .loader::after{
+    background: yellow !important;
+  }
+  .loader::before {
+    top: 0;
+  }
+  .loader::after {
+    bottom: 0;
+  }
+  @keyframes load {
+    0% {
+      left: 0;
+      height: 30px;
+      width: 15px;
+    }
+    50% {
+      height: 8px;
+      width: 40px;
+    }
+    100% {
+      left: 235px;
+      height: 30px;
+      width: 15px;
+    }
+  }
+@media only screen and (min-width:200px) and (max-width:650px) {
+  .loader {
+    font-size: .8rem;
+  }
+}
+
+
+
+  

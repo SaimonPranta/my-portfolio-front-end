@@ -1,3 +1,9 @@
+/* * {
+  box-sizing: 0;
+  margin: 0;
+  padding: 0;
+  cursor: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/4424790/cursors-edge.png"), auto;
+} */
 
 main{
   width: 90%;
@@ -18,7 +24,7 @@ margin: auto;
   color: #E5E4E2 !important;
 }
 html section{
-  min-height: 100vh;
+  /* min-height: 100vh; */
 }
 html p{
   font-family: Open Sans;

@@ -1,20 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <title>React App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    
-  </body>
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#1D1B34" />
+  <meta name="description" content="The portfolio of Saimon Pranta" />
+  <meta name="keywords" content=" saimonpranta.com, Saimon Pranta, web developer, full stack developer, portfolio, saimon pranta, Portfolio, The portfolio, SaimonPranta,saimonpranta, saimon, pranta, Web Developer, Web developer" />
+  <meta name="author" content="Saimon Pranta" />
+  <!-- <meta http-equiv="refresh" content="7" /> -->
+
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <title>Saimon Pranta</title>
+</head>
+
+<section class="loader-container" id="loading-section">
+  <div class="sub-loader-container">
+    <div id="bird">
+
+      <div class="lowerLip"></div>
+
+      <div class="crest"></div>
+
+      <div class="face"></div>
+
+      <div class="cheek"></div>
+
+      <div class="eye"></div>
+
+      <div class="upperLip"></div>
+
+    </div>
+    <div class="main-loader">Saimon Pranta...</div>
+  </div>
+</section>
+
+<body onload="loadingHandler()">
+  <div id="root"></div>
+</body>
+
+
+
+<script>
+  const loader = document.getElementById("loading-section")
+  function loadingHandler() {
+    loader.style.display = "none";
+  }
+</script>
+
 </html>

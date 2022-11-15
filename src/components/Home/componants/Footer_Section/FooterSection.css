@@ -5,6 +5,7 @@
     text-align: center;
     background-color: #445f9f1c;
     padding: 20px;
+    min-height: 100% !important;
 }
 .footer-section span, .dark-mood .footer-section span{
     font-size: 1rem;

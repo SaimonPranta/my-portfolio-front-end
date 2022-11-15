@@ -1,5 +1,6 @@
 import React from 'react';
 import introImage from '../../../../assets/images/my-image/pranto-vai-8.png';
+import introImage2 from '../../../../assets/images/my-image/IMG_20220929_123053-1.png';
 import DownloadCV from '../../../Download_CV/DownloadCV';
 import './HeroSection.css';
 import Fade from 'react-reveal/Fade';
@@ -23,6 +24,8 @@ const HeroSection = () => {
                 </div>
                 <div className='common-img'>
                     <img src={introImage} alt="_Image" />
+                    {/* <img src={introImage2} alt="_Image" /> */}
+
                 </div>
             </section>
         </Fade>

@@ -6,13 +6,15 @@ import MiniFooter from '../Mini_Footer/MiniFooter';
 import { NavLink } from 'react-router-dom';
 
 const Porjectshandle = () => {
-    const [porjectInfo, setProjectInfo] = useState({})
+    const [porjectInfo, setProjectInfo] = useState([])
+    const cooki = document.cookie.split("=")[1];
 
     useEffect(() => {
-        fetch(process.env.REACT_APP_PROJECT_API)
+        fetch(`${process.env.REACT_APP_PROJECT_API}/api/porjects`, {
+            method: "GET"
+        })
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 const newArray = [];
                 for (let i = data.length - 1; i >= 0; i--) {
                     const element = data[i];
@@ -21,56 +23,60 @@ const Porjectshandle = () => {
                 }
             })
     }, []);
-    const handleDeleteProduct = (event, projectId) => {
-        event.preventDefault();
-        console.log(projectId)
-        fetch(`http://localhost:7000/api/single_porject?id=${projectId}`, {
-            method: "DELETE"
-        })
-        .then(res => res.json())
-        .then(data => {
-            if (data.sucess) {
-                event.target.parentNode.parentNode.parentNode.parentNode.remove()
-            }
 
+    const handleDeleteProduct = (event, projectId, projectName) => {
+        event.preventDefault();
+        fetch(`${process.env.REACT_APP_PROJECT_API}/api/single_porject?id=${projectId}&ImgName=${projectName}`, {
+            method: "DELETE",
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+                authorization: `Bearer ${cooki}`
+              }
         })
+            .then(res => res.json())
+            .then(data => {
+                if (data.sucess) {
+                    event.target.parentNode.parentNode.parentNode.parentNode.remove()
+                }
+
+            })
     }
 
 
     return (
-        <section>
-        <Header />
+        <section style={{minHeight: "100vh"}}>
+            <Header />
 
-        <Fade bottom duration={2000} distance="40px">
-            <div className='project-sub-taitel'>
-                <h4>Projects Admin Panel</h4>
-                <NavLink to='/admin/add' >Add Porject</NavLink>
-            </div>
-            <div className='projects-contaienr'>
-                {
-                    porjectInfo.length && porjectInfo.map((proInfo) => {
-                        return <div key={proInfo._id}>
-                            <Zoom>
-                                <div className='sub-poroject-container'>
-                                    <div>
-                                        <img src={`data:${proInfo.image.contentType};base64,${proInfo.image.data}`} alt="_image"/>
-                                    </div>
-                                    <div className='projects-text-contaienr'>
-                                        <h6>{proInfo.title}</h6>
+            <Fade bottom duration={2000} distance="40px">
+                <div className='project-sub-taitel'>
+                    <h4>Projects Admin Panel</h4>
+                    <NavLink to='/admin/add' >Add Porject</NavLink>
+                </div>
+                <div className='projects-contaienr'>
+                    {
+                        porjectInfo.length && porjectInfo.map((proInfo) => {
+                            return <div key={proInfo._id}>
+                                <Zoom>
+                                    <div className='sub-poroject-container'>
                                         <div>
-                                            <NavLink to={proInfo._id} >Edit</NavLink>
-                                            <a href='' onClick={ (event) => handleDeleteProduct(event, proInfo._id)}>Delete</a>
+                                            <img src={`${process.env.REACT_APP_PROJECT_API}/${proInfo.img}`} alt="_image" />
+                                        </div>
+                                        <div className='projects-text-contaienr'>
+                                            <h6>{proInfo.title}</h6>
+                                            <div>
+                                                <NavLink to={proInfo._id} >Edit</NavLink>
+                                                <a href='' onClick={(event) => handleDeleteProduct(event, proInfo._id, proInfo.img)}>Delete</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </Zoom>
-                        </div>
-                    })
-                }
-            </div>
-            <MiniFooter />
-        </Fade>
-    </section>
+                                </Zoom>
+                            </div>
+                        })
+                    }
+                </div>
+                <MiniFooter />
+            </Fade>
+        </section>
     );
 };
 
