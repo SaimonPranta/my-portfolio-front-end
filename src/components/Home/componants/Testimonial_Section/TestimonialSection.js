@@ -24,7 +24,7 @@ const TestimonialSection = () => {
                 <Bounce duration={1800}>
                     <div>
                         <img src={testimonialImg1} alt="_Image" loading="lazy" />
-                        <h4>Mr. saimon</h4>
+                        <h4>Mr. Raino</h4>
                         <p>
                             Very experienced and super fast. Weren’t able to get one thing done but not his fault. I will definitely use him again. Very nice guy!
                         </p>
@@ -33,7 +33,7 @@ const TestimonialSection = () => {
                 <Bounce duration={2100}>
                     <div>
                         <img src={testimonialImg3} alt="_Image" loading="lazy" />
-                        <h4>Mr. saimon</h4>
+                        <h4>Wiliam Poll</h4>
                         <p>
                             Great experience, highly recommend. Worked through all my questions with me and was very timely in his responsiveness.
                         </p>
@@ -43,7 +43,7 @@ const TestimonialSection = () => {
                 <Bounce duration={2500}>
                     <div>
                         <img src={testimonialImg2} alt="_Image" loading="lazy" />
-                        <h4>Mr. saimon</h4>
+                        <h4>Mr. Andose Walker</h4>
                         <p>
                             He was excellent to work with, and he did a great job fixing osme issues that we had.
                         </p>
