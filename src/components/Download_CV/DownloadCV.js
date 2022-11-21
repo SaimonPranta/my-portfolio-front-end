@@ -7,7 +7,7 @@ const DownloadCV = () => {
     return (
         <div className='intro-btn'>
             <a href="https://github.com/SaimonPranta" target="framename">{githubIcon} Get Me On Github</a>
-            <a href="https://github.com/SaimonPranta" target="framename">{downloadIcon} Download CV</a>
+            <a href="https://drive.google.com/file/d/1mRcKrb4H3ERxdGPm5nZr4KJtGAS_Vjip/view?fbclid=IwAR0pomHmf6epI1B3c1Y7MBZhQ3ZqxYEt-n3Td8iTwLI_uuug73pPSzi_L7k" target="framename">{downloadIcon} Download CV</a>
         </div>
 
     );
