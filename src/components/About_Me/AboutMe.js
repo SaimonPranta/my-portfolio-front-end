@@ -20,14 +20,14 @@ const AboutMe = () => {
                 <div className='about-img'>
                     <img src={myImage} alt="_image" />
                     <h1>Saimon Pranta</h1>
-                    <h4>Full-Stack Developer</h4>
+                    <h4>Full-Stack Web & Android App Developer</h4>
                 </div>
                 <div >
                     <Zoom duration={2500} distance="350px">
                         <h2>About Me</h2>
                     </Zoom>
                     <p>
-                        I’m a Front End Web developer who is passionate about making error-free websites with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented, and always work with an end goal in mind. Over the past years, I created 50s of websites for my clients. I pride myself on doing quality work and maintain excellent communication. Most of the time I work with  JavaScript, ReactJS, NextJS, NodeJS/ExpressJS but some technologies I enjoy working with PHP.
+                        I’m a Full-Stack Web & Android App Developer who is passionate about making error-free websites and apps with 100% client satisfaction. I have a passion for learning and sharing my knowledge with others as publicly as possible. I love to solve real-world problems. I am strategic, goal-oriented, and always work with an end goal in mind. Over the past years, I created 50s of websites and apps for my clients. I pride myself on doing quality work and maintain excellent communication. Most of the time I work with  JavaScript, ReactJS, NextJS, React-NativeJS, NodeJS/ExpressJS but some technologies I enjoy working with PHP and Laravel.
                     </p>
                 </div>
                 <div className='grid about-me-info-container'>

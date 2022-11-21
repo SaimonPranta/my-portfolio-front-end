@@ -12,11 +12,11 @@ const HeroSection = () => {
             <section className='grid home-intro'>
                 <div className='hero-text'>
                     <p className='first-p'>
-                        Hi, i am
+                        Hi, I'm
                     </p>
                     <h1>Saimon Pranta</h1>
                     {/* <span>( The Perfectionist )</span> <br/> */}
-                    <h2>( Full-Stack Developer )</h2>
+                    <h2>( Full-Stack Web & Android App Developer )</h2>
                     <p>A student playing with codes. Trying to learn full stack development and android app development. Loves to contribute in open source projects.</p>
                     <Jump duration={2500} distance="40px">
                         <DownloadCV />

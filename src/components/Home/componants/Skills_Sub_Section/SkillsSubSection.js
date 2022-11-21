@@ -51,7 +51,7 @@ const SkillsSubSection = () => {
                     <div>
                         <h4>React.js</h4>
                         <div className="skill-bar skill-item-5">
-                            <span>75%</span>
+                            <span>95%</span>
                         </div>
                     </div>
 
@@ -69,8 +69,18 @@ const SkillsSubSection = () => {
                 <Fade right duration={4200} distance="650px">
 
                     <div>
-                        <h4>Node.js/Express.js</h4>
+                        <h4>ReactNative.js</h4>
                         <div className="skill-bar skill-item-7">
+                            <span>85%</span>
+                        </div>
+                    </div>
+
+                </Fade>
+                <Fade right duration={4200} distance="650px">
+
+                    <div>
+                        <h4>Node.js/Express.js</h4>
+                        <div className="skill-bar skill-item-8">
                             <span>70%</span>
                         </div>
                     </div>

@@ -20,8 +20,9 @@ const FullStackSection = () => {
                 <Fade right duration={3000} distance="650px">
                     <div className=' fullStack-title'>
                         <p>{gearIcon} Building simple website using HTML, CSS, JavaScript/TypeScript, PHP</p>
-                        <p>{gearIcon} Loves to create web application using React.js, Next.js</p>
-                        <p>{gearIcon} Creating simple APIs by Node.JS and Express.js with MongoDB as database</p>
+                        <p>{gearIcon} Loves to create Web application using React.js, Next.js</p>
+                        <p>{gearIcon} Also loves to create Android application using ReactNative.js</p>
+                        <p>{gearIcon} Creating simple APIs by Node.JS and Express.js with MongoDB & MySQL as database</p>
                     </div>
                 </Fade>
             </div>

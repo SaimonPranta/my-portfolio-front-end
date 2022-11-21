@@ -91,10 +91,10 @@
 }
 
 .skill-item-5::before{
-    width: 75%;
+    width: 95%;
 }
 .skill-item-5 span{
-    left: 70.5%;
+    left: 90.5%;
 }
 
 .skill-item-6::before{
@@ -103,11 +103,17 @@
 .skill-item-6 span{
     left: 75.5%;
 }
-
 .skill-item-7::before{
-    width: 70%;
+    width: 85%;
 }
 .skill-item-7 span{
+    left: 80.5%;
+}
+
+.skill-item-8::before{
+    width: 70%;
+}
+.skill-item-8 span{
     left: 65.5%;
 }
 
@@ -128,12 +134,15 @@
         left: 64%;
     }
     .skill-item-5 span{
-        left: 69%;
+        left: 89%;
     }
     .skill-item-6 span{
         left: 74%;
     }
     .skill-item-7 span{
+        left: 79%;
+    }
+    .skill-item-8 span{
         left: 64%;
     }
 }
@@ -154,12 +163,15 @@
         left: 65%;
     }
     .skill-item-5 span{
-        left: 70%;
+        left: 90%;
     }
     .skill-item-6 span{
         left: 75%;
     }
     .skill-item-7 span{
+        left: 80%;
+    }
+    .skill-item-8 span{
         left: 65%;
     }
 }
@@ -180,12 +192,15 @@
         left: 64%;
     }
     .skill-item-5 span{
-        left: 69%;
+        left: 89%;
     }
     .skill-item-6 span{
         left: 74%;
     }
     .skill-item-7 span{
+        left: 79%;
+    }
+    .skill-item-8 span{
         left: 64%;
     }
 }
@@ -206,12 +221,15 @@
         left: 62.5%;
     }
     .skill-item-5 span{
-        left: 67.5%;
+        left: 87.5%;
     }
     .skill-item-6 span{
         left: 72.5%;
     }
     .skill-item-7 span{
+        left: 77.5%;
+    }
+    .skill-item-8 span{
         left: 62.5%;
     }
 }
@@ -232,12 +250,15 @@
         left: 65%;
     }
     .skill-item-5 span{
-        left: 70%;
+        left: 90%;
     }
     .skill-item-6 span{
         left: 75%;
     }
     .skill-item-7 span{
+        left: 80%;
+    }
+    .skill-item-8 span{
         left: 65%;
     }
 }
@@ -258,12 +279,15 @@
         left: 63%;
     }
     .skill-item-5 span{
-        left: 68%;
+        left: 88%;
     }
     .skill-item-6 span{
         left: 73%;
     }
     .skill-item-7 span{
+        left: 78%;
+    }
+    .skill-item-8 span{
         left: 63%;
     }
 }
@@ -284,12 +308,15 @@
         left: 60%;
     }
     .skill-item-5 span{
-        left: 64%;
+        left: 84%;
     }
     .skill-item-6 span{
         left: 70%;
     }
     .skill-item-7 span{
+        left: 75%;
+    }
+    .skill-item-8 span{
         left: 60%;
     }
 }
